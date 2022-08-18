@@ -1,0 +1,29 @@
+@import "../utils/variables.scss";
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0em 1em 0em 1em;
+    //font-variant: small-caps;
+    box-shadow: 5px 5px 10px;
+    
+    background-color:$color-background;
+    & > .btLogin {
+        width: 15%; //mobilentzako bada, igo 25% raino
+        height: auto;
+    }
+    & > .btLogout {
+        width: 8%;
+        height: auto;
+    }
+    & > img {
+        cursor: pointer;
+    }
+    & > h1 {
+        color: white;
+        text-align: center;
+        
+    }
+}

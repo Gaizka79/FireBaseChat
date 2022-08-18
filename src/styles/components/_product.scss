@@ -1,0 +1,64 @@
+.producto {
+    border-radius: 1em;
+    border-style: double;
+    padding: 1.5em;
+    margin: 1em;
+    background-color: brown;
+    color: white;
+
+    flex: 1 20%;
+    text-align: center;
+    flex-direction: column;
+    border-style:double;
+    border-radius: 0.5em;
+    max-width: 20%;
+    margin: 1em;
+    /* background-color: #99d98c; */
+    box-shadow: 5px 5px 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+    /* background-color: wheat; */
+    //background-image: url('../../assets/asteroide1.jpeg');
+    backdrop-filter: opacity(0.5);
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    & > h2 {
+        margin: 0;
+        text-align: center;
+    }
+
+    & > img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    & > .product_buttons {
+        display: flex;
+        flex-direction: row;
+        //min-width: 200em;
+        justify-content: space-around;
+        align-items: flex-end;
+        & > button {
+            //min-width: 10em;
+            justify-items: flex-end;;
+            min-height: 2em;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            margin-top: 1em;
+        }
+    }
+
+    @media (max-width:700px) {
+        min-width: 50%;
+    }
+    @media (max-width: 400px) {
+        min-width: 90%;
+    }
+}
+._id {
+    //display: none;
+    color: bisque;
+}

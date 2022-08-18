@@ -1,0 +1,35 @@
+
+.encabezado_productos {
+    text-align: center;
+    color: brown;
+
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    //min-width: 200em;
+    justify-content: space-around;
+    & > button {
+        min-width: 10em;
+        min-height: 2em;
+        background-color: blue;
+        color: white;
+        border-radius: 10px;
+    }
+}
+.padreProducts {
+    padding: 1em 2em 1em 2em;
+    background-color: aqua;
+    //background-image: url('../../assets/nebula.jpg');
+    background-position: center;
+    background-size: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+
+    /* & > h1 {
+        text-align: center;
+        color: brown;
+    } */
+}
