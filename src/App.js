@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
 
-  const [user, setUser] = useState(); // hook useState
+  const [user, setUser] = useState("Gaizka Arrondo"); // hook useState
 
   const login = (name) => {
     setUser(name);

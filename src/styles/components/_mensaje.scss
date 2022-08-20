@@ -1,0 +1,30 @@
+.mensaje {
+//    background-color: rgb(128, 213, 235);
+    border-radius: 0.5cm;
+    border-style: groove;
+    max-width: 40%;
+    
+    margin: 1em;
+    //display: flex;
+    //margin-top: 0.5em;
+    //margin-left: 0.5em;
+
+    //align-items: flex-end;
+};
+
+.mensajemio {
+    background-color: rgb(128, 213, 235);
+};
+.mensajenoMio {
+    background-color: pink;
+}
+
+.nombreUser {
+    margin: 0.5em;
+    font-size: small;
+}
+
+.textoMensaje {
+    margin: 0.5em;
+    text-align-last: end;
+}
