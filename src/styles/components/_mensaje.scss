@@ -12,11 +12,48 @@
     //align-items: flex-end;
 };
 
+.cajaPadre {
+    display: flex;
+    //justify-content: flex-end; /* X */
+    //align-items: flex-start; /* Y  (relacionado con align-self) */
+}
 .mensajemio {
     background-color: rgb(128, 213, 235);
+    max-width: 40%;
+    border-radius: 0.5cm;
+    border-style: groove;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    align-items: flex-end;
 };
+#conten-bloque-flex {
+    display: flex; /* Imprescindible */
+    width: 150px; /* Una longitud o auto */
+    height: 150px; /* Una longitud necesariamente */
+    justify-content: flex-end; /* X */
+    align-items: flex-start; /* Y  (relacionado con align-self) */
+    background-color: lightskyblue;
+}
+#bloque-flex {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: inherit; /* Indiferente */
+    align-self: auto; /* Y (relacionado con align-items) */
+    text-align: center;
+    background-color: green;
+    color: white;
+}
 .mensajenoMio {
     background-color: pink;
+    max-width: 40%;
+    border-radius: 0.5cm;
+    border-style: groove;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    justify-content: flex-start;
 }
 
 .nombreUser {
@@ -27,4 +64,9 @@
 .textoMensaje {
     margin: 0.5em;
     text-align-last: end;
+}
+
+.fechaMensaje {
+    margin: 0.5em;
+    font-size: small;
 }
