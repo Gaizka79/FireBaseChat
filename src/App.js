@@ -14,10 +14,7 @@ function App() {
   const login = (name) => {
     setUser(name);
   }
-  //logout
-  /* const logout = () => {
-    setUser("");
-  } */
+  
   //Change user
   const changeUser = (usuario) => {
     setUser(usuario);
