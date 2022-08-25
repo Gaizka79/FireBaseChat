@@ -23,6 +23,8 @@ function Header () {
   useEffect(() => {
     // si no hay usuario.....
     //hay ke utilizar localstorage para mantener sesion abierta
+    const auth = getAuth();
+    console.log(auth);
     if (user) {
       console.log("Tenemos al usuario: " + user)
     } else {
