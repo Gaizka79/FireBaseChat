@@ -4,7 +4,7 @@ import btLogout from "../../assets/logout.png";
 import { userContext } from '../../context/userContext';
 
 import firebaseConfig from "../../utils/firebaseConfig";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, setPersistence, browserSessionPersistence } from "firebase/auth";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -12,12 +12,10 @@ import { getAnalytics } from "firebase/analytics";
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-
-
 function Header () {
 
   const provider = new GoogleAuthProvider();
-  const { user, logout, changeUser } = useContext(userContext);
+  const { user, changeUser } = useContext(userContext);
   console.log(user);
   //const [usuario, setUsuario] = useState(user);
   //console.log(usuario);
@@ -43,10 +41,10 @@ function Header () {
         const token = credential.accessToken;
         console.log(token);
         // The signed-in user info.
-        const user = result.user;
-        console.log(user.displayName);
+        const usuario = result.user;
+        console.log(usuario.displayName);
         //setUsuario(user.displayName);
-        changeUser(user.displayName);
+        changeUser(usuario.displayName);
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -59,6 +57,7 @@ function Header () {
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
       });
+    //setPersistence(auth, browserSessionPersistence);
   }
   const logOut = () => {
     const auth = getAuth();
@@ -79,7 +78,7 @@ function Header () {
       {/* <img src={btLogout} alt="logout" className="btLogout" onClick={logOut}/> */}
       <userContext.Consumer> 
         {({user}, usuario) => 
-          user?
+          user ?
             <>
               <p>Hola, {user}</p>
               <img src={btLogout} alt="logout" className="btLogout" onClick={logOut}/>
