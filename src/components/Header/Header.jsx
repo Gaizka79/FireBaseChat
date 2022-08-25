@@ -1,16 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import login from "../../assets/sign_in.jpg";
 import btLogout from "../../assets/logout.png";
 import { userContext } from '../../context/userContext';
 
 import firebaseConfig from "../../utils/firebaseConfig";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, setPersistence, browserSessionPersistence } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+//import { getAnalytics } from "firebase/analytics";
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+console.log(app);
+//const analytics = getAnalytics(app);
 
 function Header () {
 
@@ -56,12 +57,12 @@ function Header () {
       }).catch((error) => {
         // Handle Errors here.
         console.log(error);
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        //const errorCode = error.code;
+        //const errorMessage = error.message;
         // The email of the user's account used.
-        const email = error.customData.email;
+        //const email = error.customData.email;
         // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
+        //const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
       });
     //setPersistence(auth, browserSessionPersistence);
