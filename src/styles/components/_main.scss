@@ -1,11 +1,20 @@
+.main {
+    background-color: rgb(189, 181, 181);
+}
+
 .usuarios {
     border-radius: 1cm;
     background-color: aqua;
-
 }
 
 .chat {
     margin: 2em;
     border: 1cm;
-    background-color: pink;
+    background-color: rgb(6, 179, 223);
+    display: flex;
+}
+
+.enviar {
+    width: 90%;
+    justify-content: flex-end;
 }
