@@ -55,18 +55,16 @@ function Home () {
   };
 
   return (
-    <main>
+    <main className="main">
       <div>
         {msgs?
         msgs.reverse().map((mens, i) => <Mensaje data={mens} key={i} /> )
-        /* newArray.map((mens, i) => <Mensaje data={mens} key={i} /> ) */
         :<p>No hay array</p>}
       </div>
       <div className="chat">
-        <form onSubmit={sendMsg}>
+        <form onSubmit={sendMsg} className="enviar">
           <input type="text" name="msg" />
           <input type="submit" value="Enviar"/>
-          {/* <button onClick={paintMsgs}>coleccion</button> */}
         </form>
       </div>
     </main>

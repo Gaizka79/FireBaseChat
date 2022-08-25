@@ -25,6 +25,10 @@ function Header () {
     //hay ke utilizar localstorage para mantener sesion abierta
     const auth = getAuth();
     console.log(auth);
+    //console.log(auth.currentUser.displayName);
+    if (auth.currentUser) {
+      changeUser(auth.currentUser.displayName);
+    };
     if (user) {
       console.log("Tenemos al usuario: " + user)
     } else {
@@ -40,6 +44,7 @@ function Header () {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         console.log(credential);
+        console.log(result);
         const token = credential.accessToken;
         console.log(token);
         // The signed-in user info.
