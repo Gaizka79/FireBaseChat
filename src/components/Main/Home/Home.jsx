@@ -53,12 +53,14 @@ function Home () {
     setMsgs([...msgs, datos]);
     e.target.msg.value = "";
   };
+  
 
   return (
+    user ?
     <main className="main">
       <div>
         {msgs?
-        msgs.reverse().map((mens, i) => <Mensaje data={mens} key={i} /> )
+        msgs.map((mens, i) => <Mensaje data={mens} key={i} /> )
         :<p>No hay array</p>}
       </div>
       <div className="chat">
@@ -68,7 +70,7 @@ function Home () {
         </form>
       </div>
     </main>
-
+    : <p>Necesario Sign In with Google</p>
   )
   
 }
